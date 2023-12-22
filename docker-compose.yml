@@ -45,7 +45,7 @@ services:
     restart: unless-stopped
     environment:
       GITEA_INSTANCE_URL: "http://gitea:3000"
-      GITEA_RUNNER_REGISTRATION_TOKEN: "p6R4dlp00foJxi7RlSb8XNiicBv03O8pPshmsiSJ"
+      GITEA_RUNNER_REGISTRATION_TOKEN: "runner-token-here"
       GITEA_RUNNER_NAME: "runner-1"
       GITEA_RUNNER_LABELS: "runner-1-docker"
       GITEA_INSTANCE_INSECURE: "true"
