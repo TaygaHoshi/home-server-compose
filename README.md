@@ -23,4 +23,4 @@ START_SSH_SERVER = true
 * RAM: 4 GB
 
 # Screenshots
-TODO
+![homarr](/screenshots/homarr.png)
