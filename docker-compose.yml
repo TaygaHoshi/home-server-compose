@@ -53,11 +53,23 @@ services:
       - ./gitea-runner/data:/data
       - /var/run/docker.sock:/var/run/docker.sock
 
+  searxng:
+    container_name: searxng
+    image: searxng/searxng:latest
+    environment:
+      BASE_URL: http://server-public-url:searxng_port
+      INSTANCE_NAME: instance-name
+    volumes:
+      - ./searxng:/etc/searxng
+    ports:
+      - "searxng_port:8080"
 
   watchtower:
     container_name: watchtower
     image: containrrr/watchtower
     restart: unless-stopped
+    environment:
+      WATCHTOWER_CLEANUP: "true"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     ports:
